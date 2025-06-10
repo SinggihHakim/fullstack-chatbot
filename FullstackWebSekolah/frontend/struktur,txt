@@ -1,0 +1,34 @@
+
+CREATE DATABASE sekolah_db;
+USE sekolah_db;
+
+CREATE TABLE postingan (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    judul VARCHAR(255),
+    isi TEXT,
+    gambar VARCHAR(255),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+CREATE TABLE pendaftar (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  nama VARCHAR(100),
+  tempat_lahir VARCHAR(100),
+  tanggal_lahir DATE,
+  jenis_kelamin VARCHAR(20),
+  alamat TEXT,
+  nama_ortu VARCHAR(100),
+  nohp_ortu VARCHAR(20),
+  tanggal_daftar TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+CREATE TABLE kontak (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  nama VARCHAR(100) NOT NULL,
+  email VARCHAR(100) NOT NULL,
+  subjek VARCHAR(150) NOT NULL,
+  pesan TEXT NOT NULL,
+  tanggal TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

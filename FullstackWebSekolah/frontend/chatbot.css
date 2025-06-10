@@ -1,0 +1,135 @@
+    /* FAB (Floating Action Button) */
+.chatbot-toggler {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #6fb3f8;
+    color: white;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+/* Chatbot popup container */
+.chatbot-popup {
+  display: none;
+  flex-direction: column;
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  width: 300px;
+  height: 400px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  overflow: hidden;
+  z-index: 1000;
+}
+
+/* Tampilkan chatbot ketika class 'show-chatbot' aktif */
+body.show-chatbot .chatbot-popup {
+  display: flex;
+}
+
+/* Header */
+.chatbot-header {
+  background-color: #BF0A30;
+  color: white;
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Close button */
+.close-btn {
+  background: transparent;
+  color: white;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Body chat */
+.chatbot-body {
+  flex-grow: 1;
+  padding: 10px;
+  overflow-y: auto;
+  background-color: #f9f9f9;
+}
+
+.message {
+  margin-bottom: 10px;
+  max-width: 85%;
+}
+
+.user-message {
+  text-align: right;
+  margin-left: auto;
+  background: #e0ffe0;
+  border-radius: 10px;
+  padding: 8px;
+}
+
+.ai-message {
+  text-align: left;
+  margin-right: auto;
+  background: #f1f1f1;
+  border-radius: 10px;
+  padding: 8px;
+}
+
+/* Footer input */
+.chatbot-footer {
+  padding: 10px;
+  display: flex;
+  border-top: 1px solid #ccc;
+}
+
+.chatbot-footer input {
+  flex-grow: 1;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.chatbot-footer button {
+  margin-left: 8px;
+  background-color: #6fb3f8;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Animasi loading dari bot */
+.loading-message span {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin-right: 3px;
+  background: #888;
+  border-radius: 50%;
+  animation: blink 1.4s infinite ease-in-out both;
+}
+.loading-message span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.loading-message span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes blink {
+  0%, 80%, 100% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+}
